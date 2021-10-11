@@ -43,6 +43,26 @@ public class Movie {
 		  rStatus = reStatus;
 	  }
 	  
+	  public String getName() {
+		  return name;
+	  }
+	  
+	  public Date getReleaseDate() {
+		  return releaseDate;
+	  }
+	  
+	  public String getDescription() {
+		  return description;
+	  }
+	  
+	  public Date getReceiveDate() {
+		  return receiveDate;
+	  }
+	  
+	  public String getStatus() {
+		  return rStatus;
+	  }
+	  
 	  //override toString to allow for easy printing
 	  @Override
 	  public String toString() {
