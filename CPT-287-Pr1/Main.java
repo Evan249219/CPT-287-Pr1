@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
@@ -29,7 +30,7 @@ public class Main {
             	  Release/Receive Status*/
             	
             	//the below path will likely need to be changed, this points to where it is looking for the file
-                reader = new BufferedReader(new FileReader("input.txt"));
+            	reader = new BufferedReader(new FileReader("E:/downloads/project1.txt"));
                 
                 //create a doubly-linked list to store the movies
                 Linked_List<Movie> showingList = new Linked_List<Movie>();
@@ -71,7 +72,7 @@ public class Main {
                 			+		   "4) Edit Movie Release Date \r\n"
                 			+		   "5) Edit Movie Description \r\n"
                 			+		   "6) Show Movies Before a Date \r\n"
-                			+		   "7) Save Changes \r\n"
+                			+		   "7) Output Lists to File \r\n"
                 			+		   "8) Exit \r\n");
                 	try {
                 		//make sure user input is a number
@@ -259,11 +260,33 @@ public class Main {
                 		var.nextLine();
                    	}
                     	
-                    	//TODO: don't really have to do anything since the lists are saved as they are edited?
+                    	//Evan Colyer
+                   		//output lists to file
                     	if (number == 7) {
-                    		System.out.println("All changes are saved automatically. Thank you. \r\n");
+                    		System.out.println("Writing to file, please wait... \r\n");
                     		
-                    		System.out.println("Hit enter to continue.");
+                    		//create new filewriter object
+                    		FileWriter myWriter = new FileWriter("movieoutput.txt");
+                    		
+                    		//create list iterators
+                    		List_Iterator<Movie> sit = showingList.iterator();
+                    		List_Iterator<Movie> cit = comingList.iterator();
+
+                    		//iterate over showing list and output it to file
+                    		myWriter.write("SHOWING MOVIES: \r\n");
+                    		while (sit.hasNext()) {
+                    			myWriter.write(sit.next().toString());
+                    		}
+                    		
+                    		//iterate over coming list and output it to file
+                    		myWriter.write("COMING MOVIES: \r\n");
+                    		while (cit.hasNext()) {
+                    			myWriter.write(cit.next().toString());
+                    		}
+
+                    		myWriter.close();
+                    		
+                    		System.out.println("Writing done. Hit enter to continue.");
                     		var.nextLine();
                     	}
                     	
@@ -360,4 +383,3 @@ public class Main {
 				}
 
 }
-
