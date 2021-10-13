@@ -267,10 +267,6 @@ public class Main {
                     		//create new filewriter object
                     		FileWriter myWriter = new FileWriter("movieoutput.txt");
                     		
-                    		//create list iterators
-                    		List_Iterator<Movie> sit = showingList.iterator();
-                    		List_Iterator<Movie> cit = comingList.iterator();
-
                     		//create and array and then fill it with out movies
                     		int movObLen = showingList.size();
                     		Movie [] movieObjects = new Movie[movObLen];
@@ -305,6 +301,11 @@ public class Main {
                     			showingList.addFirst(movieObjects[i]);
                     		}
                     		
+				//create list iterators and reset them
+                    		List_Iterator<Movie> sit = showingList.iterator();
+                    		List_Iterator<Movie> cit = comingList.iterator();
+				sit.reset();
+				cit.reset();
 
                     		//iterate over showing list and output it to file
                     		myWriter.write("SHOWING MOVIES: \r\n");
