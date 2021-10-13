@@ -1,0 +1,32 @@
+SHOWING MOVIES: 
+Movie name: Independence Day
+Movie Release Date: 07/04/1996
+Description: Mystery/Thriller
+Receive Date: 01/17/2019
+Movie Status: received
+Movie name: Mars Attacks
+Movie Release Date: 03/18/2006
+Description: Mystery/Thriller
+Receive Date: 01/17/2019
+Movie Status: received
+Movie name: Fantasia
+Movie Release Date: 09/14/1993
+Description: Mystery/Thriller
+Receive Date: 01/17/2019
+Movie Status: received
+Movie name: Miss Bala
+Movie Release Date: 10/07/2021
+Description: Mystery/Thriller
+Receive Date: 01/17/2019
+Movie Status: received
+Movie name: Glass
+Movie Release Date: 01/18/2019
+Description: Drama/Fantasy
+Receive Date: 01/12/2019
+Movie Status: released
+COMING MOVIES: 
+Movie name: A Third Movie
+Movie Release Date: 12/12/2021
+Description: Fighting/Combat
+Receive Date: 12/07/2021
+Movie Status: received
